@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameState : MonoBehaviour
 {
+    public static int followerCount = 1;
+
     public int Points { get; set; }
 
     // Start is called before the first frame update
