@@ -19,8 +19,8 @@ public class ObstacleController : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (antsRequired >= PlayerController.followerCount) {
-            Destroy(gameObject);
-        }
+        //if (antsRequired >= PlayerController.followerCount) {
+        //   Destroy(gameObject);
+        //}
     }
 }
