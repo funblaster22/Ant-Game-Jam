@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class ObstacleController : MonoBehaviour
+public class PointBox : MonoBehaviour
 {
-    public int antsRequired = 1;
+    [SerializeField] TextMeshProUGUI pointLabel;
+    [SerializeField] GameState gameState;
 
     // Start is called before the first frame update
     void Start()
@@ -15,12 +17,7 @@ public class ObstacleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        pointLabel.text = "Points: " + gameState.Points;
         
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if (antsRequired >= PlayerController.followerCount) {
-            Destroy(gameObject);
-        }
     }
 }
