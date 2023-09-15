@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public static int followerCount = 1;
-
-    public float moveForce = 10;
+    public float moveSpeed = 10;
     public Camera cam;
     Rigidbody2D rb;
     
@@ -21,8 +20,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         
-        Vector3 moveDir = (transform.position - cam.ScreenToWorldPoint(Input.mousePosition)).normalized;
-        rb.AddForce(moveDir*moveForce*Time.deltaTime);
+        Vector3 moveDir = Vector3.Normalize(cam.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+        rb.velocity = moveDir*moveSpeed;
+
         
     }
 
