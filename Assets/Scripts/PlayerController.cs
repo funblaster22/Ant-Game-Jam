@@ -5,20 +5,22 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveForce = 10;
+    public Camera cam;
+    Rigidbody2D rb;
     
     // Start is called before the first frame update
     void Start()
     {
-        Rigidbody rb = transform.GetComponent(Rigidbody);
+        rb = transform.GetComponent<Rigidbody2D>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        //
-        Vector3 moveDir = (transform.position - Camera.ScreenToWorldPoint(Input.mousePosition)).normalized;
-        rb.addforce(moveDir*moveForce);
+        
+        Vector3 moveDir = (transform.position - cam.ScreenToWorldPoint(Input.mousePosition)).normalized;
+        rb.AddForce(moveDir*moveForce*Time.deltaTime);
         
     }
 }
