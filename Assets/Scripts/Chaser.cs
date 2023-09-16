@@ -36,7 +36,7 @@ public class Chaser : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (antsRequired >= GameState.followerCount) {
+        if (antsRequired >= GameState.FollowerCount) {
             Destroy(gameObject);
         }
     }

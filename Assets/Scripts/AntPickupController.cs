@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class AntPickupController : MonoBehaviour
 {
+    public GameObject antFollower;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +18,10 @@ public class AntPickupController : MonoBehaviour
     {
         
     }
-    void OnTriggerEnter(Collider collision){
-        if(collision.transform.tag == "Player"){
-            GameState.followerCount += 1;
-            Debug.Log("Picked up an ant");
-            gameObject.SetActive(false);
-
+    private void OnTriggerEnter2D(Collider2D collision){
+        if(collision.gameObject.CompareTag("Player")){
+            Destroy(gameObject);
+            Instantiate(antFollower, transform.position, Quaternion.identity);
         }
     }
 }
