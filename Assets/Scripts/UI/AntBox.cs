@@ -7,16 +7,16 @@ public class AntBox : MonoBehaviour
 {
 
     [SerializeField] TextMeshProUGUI timeLabel;
-
+    GameState gameState;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameState = GameObject.FindGameObjectWithTag("GameConroller").GetComponent<GameState>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeLabel.text = "Ants: " + GameState.FollowerCount;
+        timeLabel.text = "Ants: " + gameState.FollowerCount;
     }
 }

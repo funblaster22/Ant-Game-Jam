@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class AntPickupController : MonoBehaviour
 {
-    public GameObject antFollower;
+    
     [SerializeField] float spinSpeed = 2;
 
+    GameState gameState;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameState = GameObject.FindGameObjectWithTag("GameConroller").GetComponent<GameState>();
+
     }
 
     // Update is called once per frame
@@ -21,8 +23,11 @@ public class AntPickupController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.CompareTag("Player")){
+            gameState.AddAnts(1);
+            
+            //destroy self
             Destroy(gameObject);
-            Instantiate(antFollower, transform.position, Quaternion.identity);
+            
         }
     }
 }
