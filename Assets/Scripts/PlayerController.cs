@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     float moveSpeed;
 
-    [SerializeField] float deadzone = 5;
+    [SerializeField] float deadzone = 2;
+    [SerializeField] float standardCamSize = 2;
     [SerializeField] float walkSpeed = 10;
     [SerializeField] float runSpeed = 15;
     [SerializeField] float crawlSpeed = 1.0f;
@@ -39,8 +40,8 @@ public class PlayerController : MonoBehaviour
         Run();
         
         Vector2 moveDir = cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-
-        float cameraScale = CameraControler.cameraSize/2;
+        //
+        float cameraScale = (CameraControler.cameraSize)/standardCamSize;
         if(moveDir.magnitude > deadzone*cameraScale ){
             rb.velocity = moveDir.normalized*moveSpeed;
         }else{
