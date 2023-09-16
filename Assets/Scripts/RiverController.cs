@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class RiverController : MonoBehaviour
 {
-    public int antsRequired = 1;
+    public int antsRequired = 5;
+    [SerializeField] GameObject finishedBridgeSprite;
+    //[SerializeField] GameObject waterSprite;
 
+    GameState gameState;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameState = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameState>();
+
     }
 
     // Update is called once per frame
@@ -19,12 +23,19 @@ public class RiverController : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        print($"You have {GameState.FollowerCount}, and I need {antsRequired}");
-        if (collision.gameObject.CompareTag("Player") && GameState.FollowerCount >= antsRequired) {
-            Destroy(GetComponent<Collider2D>());
-            var reqDisplay = GetComponent<RequirementDisplay>();
-            reqDisplay.display.SetActive(false);
-            Destroy(reqDisplay);
+        //print($"You have {GameState.FollowerCount} ants, and I need {antsRequired} ants");
+        if (collision.gameObject.CompareTag("Player") && gameState.FollowerCount >= antsRequired) {
+            GetComponent<Collider2D>().enabled = false;
+            //var reqDisplay = GetComponent<RequirementDisplay>();
+            //reqDisplay.display.SetActive(false);
+
+
+            finishedBridgeSprite.SetActive(true);
+
+            //waterSprite.SetActive(false);
+            //can't destroy the player
+            gameState.RemoveAnts(antsRequired);
+            //Destroy(reqDisplay);
 
         }
     }
