@@ -27,7 +27,7 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.296
+    value: 0.245
   smoothness:
     overrideState: 1
     value: 1
@@ -163,7 +163,7 @@ MonoBehaviour:
     value: 6
   mixerRedOutRedIn:
     overrideState: 1
-    value: 157
+    value: 134
   mixerRedOutGreenIn:
     overrideState: 0
     value: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
     value: {x: 0.9633352, y: 1, z: 0.88229316, w: 0}
   gain:
     overrideState: 1
-    value: {x: 1, y: 0.65312433, z: 0.710728, w: 0}
+    value: {x: 1, y: 0.665207, z: 0.58530873, w: 0}
   masterCurve:
     overrideState: 0
     value:
