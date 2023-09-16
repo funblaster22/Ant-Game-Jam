@@ -35,10 +35,4 @@ public class PlayerController : MonoBehaviour
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
         art.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
     }
-
-    private void OnTriggerEnter2D(Collider2D collision) {
-        print("OH NO COLLISION!");
-        if (collision.gameObject.CompareTag("Enemy"))
-            Destroy(gameObject);
-    }
 }

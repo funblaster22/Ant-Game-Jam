@@ -44,5 +44,11 @@ public class FollowerController : MonoBehaviour
         // from https://stackoverflow.com/questions/48122532/how-to-set-maximum-velocity-of-a-rigidbody-in-unity
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        print("OH NO COLLISION!");
+        if (collision.gameObject.CompareTag("Enemy"))
+            Destroy(gameObject);
+    }
+
 }
