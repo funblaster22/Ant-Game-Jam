@@ -25,6 +25,4 @@ public class LevelSwitcher : MonoBehaviour
         //SceneManager.LoadSceneAsync(sceneNames[currentLevelIndex]);
 
     }
-
-    
 }
