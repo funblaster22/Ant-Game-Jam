@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     float moveSpeed;
 
-    [SerializeField] float deadzone = 10;
+    [SerializeField] float deadzone = 5;
     [SerializeField] float walkSpeed = 10;
     [SerializeField] float runSpeed = 15;
     [SerializeField] float crawlSpeed = 1.0f;
@@ -38,9 +38,7 @@ public class PlayerController : MonoBehaviour
         //running logic (very messy and bad)
         Run();
         
-        float xDir = cam.ScreenToWorldPoint(Input.mousePosition).x - transform.position.x;
-        float yDir = cam.ScreenToWorldPoint(Input.mousePosition).y - transform.position.y;
-        Vector3 moveDir = new Vector3(xDir,yDir,0);
+        Vector2 moveDir = cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 
         float cameraScale = CameraControler.cameraSize/2;
         if(moveDir.magnitude > deadzone*cameraScale ){
