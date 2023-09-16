@@ -46,7 +46,6 @@ public class FollowerController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        print("OH NO COLLISION!");
         if (collision.gameObject.CompareTag("Enemy"))
             Destroy(gameObject);
     }

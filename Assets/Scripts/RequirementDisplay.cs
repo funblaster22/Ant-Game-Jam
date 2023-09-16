@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class RequirementDisplay : MonoBehaviour
 {
@@ -20,8 +21,13 @@ public class RequirementDisplay : MonoBehaviour
     void Update()
     {
         if ((transform.position - player.transform.position).magnitude <= distanceAway) {
-            print("TOO CLOSE *blushes*");
-            display.SetActive(true);
+            if (!display.activeSelf) {
+                display.SetActive(true);
+                var textComponent = display.GetComponent<TMP_Text>();
+                textComponent.transform.position = transform.position;
+                textComponent.text = $"{GameState.FollowerCount + 1}/{antsRequired} Ants";
+                textComponent.color = GameState.FollowerCount + 1 >= antsRequired ? Color.green : Color.red;
+            }
         } else {
             display.SetActive(false);
         }
