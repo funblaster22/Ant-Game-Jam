@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 678fa82d7558ebb4bb18dcc72db4109c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevel: OliverTestScene
 --- !u!1 &6511180013342766924
 GameObject:
   m_ObjectHideFlags: 0

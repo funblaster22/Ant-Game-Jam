@@ -23,6 +23,8 @@ public class ObstacleController : MonoBehaviour
     {
         if (gameState.FollowerCount > antsRequired){
             rb.isKinematic = false;
+        }else{
+            rb.isKinematic = true;
         }
     }
 

@@ -32,7 +32,8 @@ public class Chaser : MonoBehaviour
         diff.Normalize();
 
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-        art.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+        //sprite is flipped by default
+        art.rotation = Quaternion.Euler(0f, 0f, rot_z - 90 + 180);
 
         // from https://stackoverflow.com/questions/48122532/how-to-set-maximum-velocity-of-a-rigidbody-in-unity
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
