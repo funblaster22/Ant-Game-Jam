@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = moveDir*crawlSpeed/cameraScale;
         }
         
-        Debug.Log(moveDir.magnitude);
+        //Debug.Log(moveDir.magnitude);
 
         //taken from https://discussions.unity.com/t/lookat-2d-equivalent/88118
         Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
