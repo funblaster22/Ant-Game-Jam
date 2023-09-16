@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1814338647978987325}
   - component: {fileID: 7237029060056052998}
   - component: {fileID: 5084720748152800348}
+  - component: {fileID: 7174841531604446906}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: GameController
@@ -65,3 +66,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FollowerCount: 0
   antFollower: {fileID: 4495168275834149656, guid: 9e69d00d134c1c4469da842032910117, type: 3}
+--- !u!114 &7174841531604446906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9026848233175106840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320d6e14f9871174e8e515c65e59ad4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomSpeed: 0.1
+  startingSize: 2
+  growSpeed: 0.1
