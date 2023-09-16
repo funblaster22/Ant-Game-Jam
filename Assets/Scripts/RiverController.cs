@@ -26,8 +26,8 @@ public class RiverController : MonoBehaviour
         //print($"You have {GameState.FollowerCount} ants, and I need {antsRequired} ants");
         if (collision.gameObject.CompareTag("Player") && gameState.FollowerCount >= antsRequired) {
             GetComponent<Collider2D>().enabled = false;
-            //var reqDisplay = GetComponent<RequirementDisplay>();
-            //reqDisplay.display.SetActive(false);
+            var reqDisplay = GetComponent<RequirementDisplay>();
+            reqDisplay.display.SetActive(false);
 
 
             finishedBridgeSprite.SetActive(true);
