@@ -18,7 +18,7 @@ public class Goal : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Food") {
+        if (collision.gameObject.CompareTag("Food")) {
             Destroy(collision.gameObject);
             GameState.Points++;
         }
