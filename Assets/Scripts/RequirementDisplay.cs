@@ -10,11 +10,13 @@ public class RequirementDisplay : MonoBehaviour
     public GameObject display;
 
     private Transform player;
+    private GameState gameState;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        gameState = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameState>();
     }
 
     // Update is called once per frame
@@ -25,8 +27,8 @@ public class RequirementDisplay : MonoBehaviour
                 display.SetActive(true);
                 var textComponent = display.GetComponent<TMP_Text>();
                 textComponent.transform.position = transform.position;
-                //textComponent.text = $"{GameState.FollowerCount}/{antsRequired} Ants";
-                //textComponent.color = GameState.FollowerCount >= antsRequired ? Color.green : Color.red;
+                textComponent.text = $"{gameState.FollowerCount}/{antsRequired} Ants";
+                textComponent.color = gameState.FollowerCount >= antsRequired ? Color.green : Color.red;
             }
         } else {
             display.SetActive(false);
