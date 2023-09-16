@@ -27,11 +27,20 @@ public class RequirementDisplay : MonoBehaviour
                 display.SetActive(true);
                 var textComponent = display.GetComponent<TMP_Text>();
                 textComponent.transform.position = transform.position;
-                textComponent.text = $"{gameState.FollowerCount}/{antsRequired} Ants";
+                textComponent.text = $"{gameState.FollowerCount + 1}/{antsRequired + 1} Ants";
                 textComponent.color = gameState.FollowerCount >= antsRequired ? Color.green : Color.red;
             }
         } else {
             display.SetActive(false);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        print("COLLIDED!");
+        if (collision.gameObject.CompareTag("Player") && gameState.FollowerCount >= antsRequired) {
+            print("Goodbye cruel world!");
+            var reqDisplay = GetComponent<RequirementDisplay>();
+            reqDisplay.display.SetActive(false);
         }
     }
 }
