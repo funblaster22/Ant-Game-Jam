@@ -19,7 +19,7 @@ public class ObstacleController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (antsRequired >= GameState.FollowerCount) {
+        if (antsRequired <= GameState.FollowerCount) {
             Destroy(gameObject);
         }
     }
