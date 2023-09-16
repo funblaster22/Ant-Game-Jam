@@ -1,22 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Chaser : MonoBehaviour
 {
     public float moveSpeed = 0.5f;
     public float maxSpeed = 2f;
+
+    public int antDeathNum = 100;
     GameObject player;
     Rigidbody2D rb;
-    public Transform art;
+    [SerializeField] Transform art;
 
-    public int antsRequired = 1;
     GameState gameState;
     void Start()
     {
         rb = transform.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
-        gameState = GameObject.FindGameObjectWithTag("GameConroller").GetComponent<GameState>();
+        gameState = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameState>();
     }
 
     // Update is called once per frame
@@ -37,8 +39,15 @@ public class Chaser : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (antsRequired >= gameState.FollowerCount) {
-            Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Follower")) {
+            gameState.RemoveAnt(collision.gameObject);
+        }else if (collision.gameObject.CompareTag("Player") && gameState.FollowerCount > antDeathNum) {
+            Die();
         }
+    }
+
+    void Die(){
+        //replace sprite
+        this.enabled = false;
     }
 }

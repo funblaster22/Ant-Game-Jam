@@ -58,4 +58,12 @@ public class GameState : MonoBehaviour
         }
         
     }
+
+    public void RemoveAnt(GameObject ant){
+        FollowerCount -= 1;
+        //Destroys the ant passed
+        print("Eatin' an ant");
+        Destroy(ant);
+        
+    }
 }
