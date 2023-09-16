@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AntPickupController : MonoBehaviour
@@ -14,5 +15,13 @@ public class AntPickupController : MonoBehaviour
     void Update()
     {
         
+    }
+    void OnTriggerEnter(Collider2D collision){
+        if(collision.transform.tag == "Player"){
+            GameState.followerCount += 1;
+            Debug.Log("Picked up an ant");
+            gameObject.SetActive(false);
+
+        }
     }
 }
