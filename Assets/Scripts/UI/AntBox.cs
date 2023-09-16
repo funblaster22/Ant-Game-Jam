@@ -11,7 +11,7 @@ public class AntBox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameState = GameObject.FindGameObjectWithTag("GameConroller").GetComponent<GameState>();
+        gameState = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameState>();
     }
 
     // Update is called once per frame

@@ -15,7 +15,7 @@ public class ObstacleController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         //kinematic is static, non-dynamic
         rb.isKinematic = true;
-        gameState = GameObject.FindGameObjectWithTag("GameConroller").GetComponent<GameState>();
+        gameState = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameState>();
     }
 
     // Update is called once per frame

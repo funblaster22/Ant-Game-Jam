@@ -14,7 +14,7 @@ public class CameraControler : MonoBehaviour
     void Start()
     {
         _camera = GetComponent<Camera>();
-        gameState = GameObject.FindGameObjectWithTag("Game Controller").GetComponent<GameState>();
+        gameState = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameState>();
 
         
     }
