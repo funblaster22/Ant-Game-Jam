@@ -3012,6 +3012,10 @@ PrefabInstance:
       propertyPath: antsRequired
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7347513484034873738, guid: acfbd7b818aaeee49a86873fafbd10a5, type: 3}
+      propertyPath: antsRequired
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7434684994431993577, guid: acfbd7b818aaeee49a86873fafbd10a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.79

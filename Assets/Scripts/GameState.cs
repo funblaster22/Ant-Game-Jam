@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameState : MonoBehaviour
 {
-    public static int FollowerCount => GameObject.FindGameObjectsWithTag("Follower").Length;
+    public static int FollowerCount => GameObject.FindGameObjectsWithTag("Follower").Length + 1;  // +1 to include the player
     public static int Points { get; set; } = 0;
     public static float TimeLeft { get; set; } = 100;
 
