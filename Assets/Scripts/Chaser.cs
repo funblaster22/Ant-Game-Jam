@@ -16,7 +16,7 @@ public class Chaser : MonoBehaviour
     {
         rb = transform.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
-        gameState = GameObject.FindGameObjectWithTag("GameConroller").GetComponent<GameState>();
+        gameState = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameState>();
     }
 
     // Update is called once per frame
@@ -37,8 +37,12 @@ public class Chaser : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (antsRequired >= gameState.FollowerCount) {
-            Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Follower")) {
+            gameState.RemoveAnt(collision.gameObject);
+        }else if (collision.gameObject.CompareTag("Player")) {
+            
         }
     }
+
+
 }
