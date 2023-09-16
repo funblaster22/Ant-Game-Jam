@@ -11,11 +11,12 @@ public class Chaser : MonoBehaviour
     public Transform art;
 
     public int antsRequired = 1;
-
+    GameState gameState;
     void Start()
     {
         rb = transform.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
+        gameState = GameObject.FindGameObjectWithTag("GameConroller").GetComponent<GameState>();
     }
 
     // Update is called once per frame
@@ -36,7 +37,7 @@ public class Chaser : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (antsRequired >= GameState.FollowerCount) {
+        if (antsRequired >= gameState.FollowerCount) {
             Destroy(gameObject);
         }
     }

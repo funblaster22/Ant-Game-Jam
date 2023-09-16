@@ -25,8 +25,8 @@ public class RequirementDisplay : MonoBehaviour
                 display.SetActive(true);
                 var textComponent = display.GetComponent<TMP_Text>();
                 textComponent.transform.position = transform.position;
-                textComponent.text = $"{GameState.FollowerCount}/{antsRequired} Ants";
-                textComponent.color = GameState.FollowerCount >= antsRequired ? Color.green : Color.red;
+                //textComponent.text = $"{GameState.FollowerCount}/{antsRequired} Ants";
+                //textComponent.color = GameState.FollowerCount >= antsRequired ? Color.green : Color.red;
             }
         } else {
             display.SetActive(false);

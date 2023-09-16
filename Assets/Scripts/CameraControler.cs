@@ -7,17 +7,22 @@ public class CameraControler : MonoBehaviour
     private Camera _camera;
     //default 2, expands with higher followers
     public static float cameraSize;
-
+    public float startingSize = 2;
+    public float growSpeed = 0.1f;
+    GameState gameState;
     // Start is called before the first frame update
     void Start()
     {
         _camera = GetComponent<Camera>();
+        gameState = GameObject.FindGameObjectWithTag("Game Controller").GetComponent<GameState>();
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        cameraSize = GameState.FollowerCount * 0.1f + 4;
+        cameraSize = (gameState.FollowerCount - 1) * growSpeed + startingSize;
         _camera.orthographicSize = cameraSize;
     }
 }
