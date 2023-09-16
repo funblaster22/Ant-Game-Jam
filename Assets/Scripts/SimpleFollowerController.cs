@@ -8,7 +8,7 @@ public class SimpleFollowerController : MonoBehaviour
 
     [SerializeField] float moveSpeed;
     [SerializeField] float maxSpeed;
-    [SerializeField] float maxForce;
+    //[SerializeField] float maxForce;
     GameObject player;
     Rigidbody2D rb;
     // Start is called before the first frame update
@@ -31,6 +31,8 @@ public class SimpleFollowerController : MonoBehaviour
         diff.Normalize();
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
         sprite.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+
+        rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
 
     }
 }
