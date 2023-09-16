@@ -167,8 +167,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc8d2240b1aedb4ca8a6e9a62537007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadzone: 2
   walkSpeed: 5
   runSpeed: 10
+  crawlSpeed: 1
   cam: {fileID: 2361983670565347181}
   art: {fileID: 6307097237762841009}
   recoverSpeed: 0.5
