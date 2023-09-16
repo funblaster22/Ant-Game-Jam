@@ -63,5 +63,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bb07397db0ce8346a6ed59fa5ba9b29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FollowerCount: 1
+  FollowerCount: 0
   antFollower: {fileID: 4495168275834149656, guid: 9e69d00d134c1c4469da842032910117, type: 3}

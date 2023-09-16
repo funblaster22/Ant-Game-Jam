@@ -135,18 +135,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bridge Spot
       objectReference: {fileID: 0}
-    - target: {fileID: 7347513484034873738, guid: acfbd7b818aaeee49a86873fafbd10a5, type: 3}
-      propertyPath: waterSprite
-      value: 
-      objectReference: {fileID: 1829085933}
-    - target: {fileID: 7347513484034873738, guid: acfbd7b818aaeee49a86873fafbd10a5, type: 3}
-      propertyPath: antsRequired
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7347513484034873738, guid: acfbd7b818aaeee49a86873fafbd10a5, type: 3}
-      propertyPath: finishedBridgeSprite
-      value: 
-      objectReference: {fileID: 1742335171}
     - target: {fileID: 7434684994431993577, guid: acfbd7b818aaeee49a86873fafbd10a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2348,16 +2336,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11a50adc7c8cba4479cc4893200755e0, type: 3}
---- !u!1 &1742335171 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2045755646434037027, guid: acfbd7b818aaeee49a86873fafbd10a5, type: 3}
-  m_PrefabInstance: {fileID: 232032967}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1829085933 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8292095828821407948, guid: acfbd7b818aaeee49a86873fafbd10a5, type: 3}
-  m_PrefabInstance: {fileID: 232032967}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1973197997 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4507030480903855951, guid: fb4f05120beaae54ca58ef898c36715f, type: 3}

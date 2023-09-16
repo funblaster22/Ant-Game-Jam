@@ -231,9 +231,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a82a33f87105ff4fbebf5f60880dfbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  antsRequired: 1
-  finishedBridgeSprite: {fileID: 0}
-  waterSprite: {fileID: 0}
+  antsRequired: 5
+  finishedBridgeSprite: {fileID: 2045755646434037027}
+  waterSprite: {fileID: 8292095828821407948}
 --- !u!61 &6440918384633984510
 BoxCollider2D:
   m_ObjectHideFlags: 0
