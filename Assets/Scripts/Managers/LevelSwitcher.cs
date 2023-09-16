@@ -21,8 +21,8 @@ public class LevelSwitcher : MonoBehaviour
     }
 
     public void nextLevel(){
-        currentLevelIndex++;
-        SceneManager.LoadSceneAsync(sceneNames[currentLevelIndex]);
+        //currentLevelIndex++;
+        //SceneManager.LoadSceneAsync(sceneNames[currentLevelIndex]);
 
     }
 }

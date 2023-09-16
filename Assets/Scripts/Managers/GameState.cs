@@ -45,6 +45,7 @@ public class GameState : MonoBehaviour
     public void AddAnts(int num){
         FollowerCount += num;
         Instantiate(antFollower, player.transform.position, Quaternion.identity,transform);
+        
     }
 
     public void RemoveAnts(int num){

@@ -192,6 +192,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AntFollower (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6055617136483489364, guid: 9e69d00d134c1c4469da842032910117, type: 3}
+      propertyPath: m_LinearDrag
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8503851789630554135, guid: 9e69d00d134c1c4469da842032910117, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.87
@@ -624,10 +628,6 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 3126111101558779931, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 1024
-      objectReference: {fileID: 0}
     - target: {fileID: 6009544282865030904, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1006,7 +1006,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3640502290573516639, guid: 9e69d00d134c1c4469da842032910117, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4495168275834149656, guid: 9e69d00d134c1c4469da842032910117, type: 3}
       propertyPath: m_Name
