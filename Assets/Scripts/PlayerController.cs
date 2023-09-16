@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     float moveSpeed;
 
-    [SerializeField] float deadzone = 5;
+    [SerializeField] float deadzone = 2;
     [SerializeField] float walkSpeed = 10;
     [SerializeField] float runSpeed = 15;
     [SerializeField] float crawlSpeed = 1.0f;
