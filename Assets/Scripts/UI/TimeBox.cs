@@ -17,6 +17,5 @@ public class TimeBox : MonoBehaviour
     void Update()
     {
         timeLabel.text = "Time: " + GameState.TimeLeft.ToString("0.0");
-        
     }
 }
