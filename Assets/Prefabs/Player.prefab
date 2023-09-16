@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 709474948325061798}
   - component: {fileID: 2361983670565347181}
   - component: {fileID: 7295347032027640998}
+  - component: {fileID: 2178567412852140022}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -105,6 +106,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852352485795448011}
   m_Enabled: 1
+--- !u!114 &2178567412852140022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852352485795448011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2049c92afca26da499ba6b27953158d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &986906867524464554
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,8 +193,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dc8d2240b1aedb4ca8a6e9a62537007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadzone: 2
   walkSpeed: 5
   runSpeed: 10
+  crawlSpeed: 1
   cam: {fileID: 2361983670565347181}
   art: {fileID: 6307097237762841009}
   recoverSpeed: 0.5

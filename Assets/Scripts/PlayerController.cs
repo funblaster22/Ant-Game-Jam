@@ -6,8 +6,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     float moveSpeed;
+
+    [SerializeField] float deadzone = 10;
     [SerializeField] float walkSpeed = 10;
     [SerializeField] float runSpeed = 15;
+    [SerializeField] float crawlSpeed = 1.0f;
     public Camera cam;
     Rigidbody2D rb;
     public Transform art;
@@ -37,9 +40,19 @@ public class PlayerController : MonoBehaviour
         
         float xDir = cam.ScreenToWorldPoint(Input.mousePosition).x - transform.position.x;
         float yDir = cam.ScreenToWorldPoint(Input.mousePosition).y - transform.position.y;
-        Vector3 moveDir = new Vector3(xDir,yDir,0).normalized;
-        rb.velocity = moveDir*moveSpeed;
-        //Debug.Log(moveDir.z);
+        Vector3 moveDir = new Vector3(xDir,yDir,0);
+
+        float cameraScale = CameraControler.cameraSize/2;
+        if(moveDir.magnitude > deadzone*cameraScale ){
+            rb.velocity = moveDir.normalized*moveSpeed;
+        }else{
+            //crawlzone
+            //unnormalized for finetuned control
+            //account for increasing camera size
+            rb.velocity = moveDir*crawlSpeed/cameraScale;
+        }
+        
+        Debug.Log(moveDir.magnitude);
 
         //taken from https://discussions.unity.com/t/lookat-2d-equivalent/88118
         Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;

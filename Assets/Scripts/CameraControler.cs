@@ -5,6 +5,8 @@ using UnityEngine;
 public class CameraControler : MonoBehaviour
 {
     private Camera _camera;
+    //default 2, expands with higher followers
+    public static float cameraSize;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +17,7 @@ public class CameraControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _camera.orthographicSize = (float)(GameState.FollowerCount * 0.1 + 2);
+        cameraSize = GameState.FollowerCount * 0.1f + 2;
+        _camera.orthographicSize = cameraSize;
     }
 }
