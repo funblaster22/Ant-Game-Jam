@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4309579669760173919}
   - component: {fileID: 754525858449548030}
   - component: {fileID: 586743911386902590}
+  - component: {fileID: 5258013183682338548}
   m_Layer: 0
   m_Name: PushBox
   m_TagString: Untagged
@@ -158,3 +159,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5258013183682338548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7747537287999971807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa9034c245ff8f4486e777b36277933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  antsRequired: 5
