@@ -7,7 +7,7 @@ public class GameState : MonoBehaviour
 {
     //public  int FollowerCount => GameObject.FindGameObjectsWithTag("Follower").Length + 1;  // +1 to include the player
 
-    public int FollowerCount = 1;
+    public int FollowerCount = 0;
     public static int Points { get; set; } = 0;
     public static float TimeLeft { get; set; } = 100;
 
@@ -49,5 +49,12 @@ public class GameState : MonoBehaviour
 
     public void RemoveAnts(int num){
         FollowerCount -= num;
+        //destroy num ants
+        //ants are only child for now
+
+        for(int i = 0; i < num; i++){
+            Destroy(transform.GetChild(i).gameObject);
+        }
+        
     }
 }

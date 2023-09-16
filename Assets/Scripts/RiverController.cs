@@ -32,6 +32,8 @@ public class RiverController : MonoBehaviour
 
             finishedBridgeSprite.SetActive(true);
             waterSprite.SetActive(false);
+            //can't destroy the player
+            gameState.RemoveAnts(antsRequired);
             //Destroy(reqDisplay);
 
         }
