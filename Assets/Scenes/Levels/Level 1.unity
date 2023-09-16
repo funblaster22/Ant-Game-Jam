@@ -196,6 +196,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2200277882826055382, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: 3a64148cb846f5c49aa46684560a85d7, type: 2}
     - target: {fileID: 6009544282865030904, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
