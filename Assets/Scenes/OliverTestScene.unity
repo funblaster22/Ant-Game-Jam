@@ -391,18 +391,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5658539127094912891, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
-      propertyPath: runSpeed
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5658539127094912891, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
-      propertyPath: maxStamina
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 5658539127094912891, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
-      propertyPath: recoverSpeed
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6009544282865030904, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

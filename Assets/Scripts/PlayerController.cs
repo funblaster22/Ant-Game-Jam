@@ -35,10 +35,11 @@ public class PlayerController : MonoBehaviour
         //running logic (very messy and bad)
         Run();
         
-
-        Vector3 moveDir = Vector3.Normalize(cam.ScreenToWorldPoint(Input.mousePosition) - transform.position);
+        float xDir = cam.ScreenToWorldPoint(Input.mousePosition).x - transform.position.x;
+        float yDir = cam.ScreenToWorldPoint(Input.mousePosition).y - transform.position.y;
+        Vector3 moveDir = new Vector3(xDir,yDir,0).normalized;
         rb.velocity = moveDir*moveSpeed;
-        //Debug.Log(moveDir*moveSpeed);
+        Debug.Log(moveDir.z);
 
         //taken from https://discussions.unity.com/t/lookat-2d-equivalent/88118
         Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
@@ -63,7 +64,7 @@ public class PlayerController : MonoBehaviour
                 stamina -= Time.deltaTime;
             }else{
                 //once running, can't try running again
-                Debug.Log("Recovering");
+                //Debug.Log("Recovering");
                 recovering = true;
             }
         }
