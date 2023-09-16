@@ -10,12 +10,14 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     public Transform art;
 
-    
+    //GameState gameState;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = transform.GetComponent<Rigidbody2D>();
+        //gameState = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameState>();
+
     }
 
     // Update is called once per frame
@@ -24,7 +26,7 @@ public class PlayerController : MonoBehaviour
         
         Vector3 moveDir = Vector3.Normalize(cam.ScreenToWorldPoint(Input.mousePosition) - transform.position);
         rb.velocity = moveDir*moveSpeed;
-        Debug.Log(moveDir*moveSpeed);
+        //Debug.Log(moveDir*moveSpeed);
 
         //taken from https://discussions.unity.com/t/lookat-2d-equivalent/88118
         Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
