@@ -12,7 +12,7 @@ public class AntPickupController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameState = GameObject.FindGameObjectWithTag("GameConroller").GetComponent<GameState>();
+        gameState = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameState>();
 
     }
 
