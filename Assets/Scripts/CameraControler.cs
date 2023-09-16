@@ -17,7 +17,7 @@ public class CameraControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cameraSize = GameState.FollowerCount * 0.1f + 2;
+        cameraSize = GameState.FollowerCount * 0.1f + 4;
         _camera.orthographicSize = cameraSize;
     }
 }
