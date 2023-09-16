@@ -16,7 +16,7 @@ public class AntPickupController : MonoBehaviour
     {
         
     }
-    void OnTriggerEnter(Collider2D collision){
+    void OnTriggerEnter(Collider collision){
         if(collision.transform.tag == "Player"){
             GameState.followerCount += 1;
             Debug.Log("Picked up an ant");
