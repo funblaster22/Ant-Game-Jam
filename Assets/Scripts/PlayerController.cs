@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
         art.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
+    private void OnTriggerEnter2D(Collider2D collision) {
         print("OH NO COLLISION!");
         if (collision.gameObject.CompareTag("Enemy"))
             Destroy(gameObject);
