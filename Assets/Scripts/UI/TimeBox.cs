@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PointBox : MonoBehaviour
+public class TimeBox : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI pointLabel;
+    [SerializeField] TextMeshProUGUI timeLabel;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class PointBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pointLabel.text = "Points: " + GameState.Points;
+        timeLabel.text = "Time: " + GameState.TimeLeft.ToString("0.0");
         
     }
 }

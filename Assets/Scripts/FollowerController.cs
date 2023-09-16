@@ -9,7 +9,9 @@ public class FollowerController : MonoBehaviour
     GameObject player;
     Rigidbody2D rb;
     public Transform art;
-    
+
+    public float randomSpeed = 0.001f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,15 @@ public class FollowerController : MonoBehaviour
     {
         Vector3 moveDir = Vector3.Normalize(player.transform.position - transform.position);
         rb.AddForce(moveDir*moveSpeed);
+
+        // based on https://stackoverflow.com/questions/1768026/random-2d-movement-similar-to-flies-in-unity3d
+        Vector3 randomDir = new Vector3(
+            (float)((Random.value - 0.5) * randomSpeed),
+            0,
+            (float)((Random.value - 0.5) * randomSpeed)
+        );
+        rb.AddForce(randomDir);
+
         //taken from https://discussions.unity.com/t/lookat-2d-equivalent/88118
         //trig to point followers at the player
         Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
