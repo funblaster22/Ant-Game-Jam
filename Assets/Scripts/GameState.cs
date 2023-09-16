@@ -19,8 +19,6 @@ public class GameState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Points++;
-
         // from https://gamedevbeginner.com/how-to-make-countdown-timer-in-unity-minutes-seconds/
         if (timerIsRunning)
         {
