@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowerController : MonoBehaviour
+public class Chaser : MonoBehaviour
 {
-    public float moveSpeed = 1;
-    public float maxSpeed = 3;
+    public float moveSpeed = 0.5f;
+    public float maxSpeed = 2f;
     GameObject player;
     Rigidbody2D rb;
     public Transform art;
-    
-    // Start is called before the first frame update
+
+    public int antsRequired = 1;
+
     void Start()
     {
         rb = transform.GetComponent<Rigidbody2D>();
@@ -33,5 +34,10 @@ public class FollowerController : MonoBehaviour
         // from https://stackoverflow.com/questions/48122532/how-to-set-maximum-velocity-of-a-rigidbody-in-unity
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
     }
-    
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (antsRequired >= GameState.followerCount) {
+            Destroy(gameObject);
+        }
+    }
 }
