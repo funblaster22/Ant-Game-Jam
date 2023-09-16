@@ -20,5 +20,20 @@ public class GameState : MonoBehaviour
     void Update()
     {
         Points++;
+
+        // from https://gamedevbeginner.com/how-to-make-countdown-timer-in-unity-minutes-seconds/
+        if (timerIsRunning)
+        {
+            if (TimeLeft > 0)
+            {
+                TimeLeft -= Time.deltaTime;
+            }
+            else
+            {
+                Debug.Log("Time has run out!");
+                TimeLeft = 0;
+                timerIsRunning = false;
+            }
+        }
     }
 }
