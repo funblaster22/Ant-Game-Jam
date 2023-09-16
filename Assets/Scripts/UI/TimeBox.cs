@@ -1,23 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class GameState : MonoBehaviour
+public class TimeBox : MonoBehaviour
 {
-    public int followerCount = 1;
-
-    public int Points { get; set; }
-    public int TimeLeft { get; set; }
+    [SerializeField] TextMeshProUGUI timeLabel;
+    [SerializeField] GameState gameState;
 
     // Start is called before the first frame update
     void Start()
     {
-        TimeLeft = 0;    
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Points++;    
+        timeLabel.text = "Points: " + gameState.TimeLeft;
+        
     }
 }
