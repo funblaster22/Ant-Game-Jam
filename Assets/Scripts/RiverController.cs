@@ -6,7 +6,7 @@ public class RiverController : MonoBehaviour
 {
     public int antsRequired = 5;
     [SerializeField] GameObject finishedBridgeSprite;
-    [SerializeField] GameObject waterSprite;
+    //[SerializeField] GameObject waterSprite;
 
     GameState gameState;
     // Start is called before the first frame update
@@ -31,7 +31,8 @@ public class RiverController : MonoBehaviour
 
 
             finishedBridgeSprite.SetActive(true);
-            waterSprite.SetActive(false);
+
+            //waterSprite.SetActive(false);
             //can't destroy the player
             gameState.RemoveAnts(antsRequired);
             //Destroy(reqDisplay);
