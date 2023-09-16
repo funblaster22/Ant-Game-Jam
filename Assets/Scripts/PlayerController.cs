@@ -42,12 +42,14 @@ public class PlayerController : MonoBehaviour
         float yDir = cam.ScreenToWorldPoint(Input.mousePosition).y - transform.position.y;
         Vector3 moveDir = new Vector3(xDir,yDir,0);
 
-        if(moveDir.magnitude > deadzone){
+        float cameraScale = CameraControler.cameraSize/2;
+        if(moveDir.magnitude > deadzone*cameraScale ){
             rb.velocity = moveDir.normalized*moveSpeed;
         }else{
             //crawlzone
             //unnormalized for finetuned control
-            rb.velocity = moveDir*crawlSpeed;
+            //account for increasing camera size
+            rb.velocity = moveDir*crawlSpeed/cameraScale;
         }
         
         Debug.Log(moveDir.magnitude);
