@@ -8778,6 +8778,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8842391128506564698, guid: 11a50adc7c8cba4479cc4893200755e0, type: 3}
   m_PrefabInstance: {fileID: 787229206}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &792933744 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2228257295362308992, guid: 54b1c15d181fe4c4984430a9ccd06b02, type: 3}
+  m_PrefabInstance: {fileID: 1628705611}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &810218184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13885,7 +13890,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1053668805630419672, guid: 54b1c15d181fe4c4984430a9ccd06b02, type: 3}
       propertyPath: m_Name
-      value: Boss Hole (1)
+      value: Boss Hole
       objectReference: {fileID: 0}
     - target: {fileID: 1852962114960268943, guid: 54b1c15d181fe4c4984430a9ccd06b02, type: 3}
       propertyPath: m_LocalScale.x
@@ -13906,7 +13911,15 @@ PrefabInstance:
     - target: {fileID: 2228257295362308992, guid: 54b1c15d181fe4c4984430a9ccd06b02, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 34e33edb48776b345b531d3edd4d1602, type: 2}
+      objectReference: {fileID: 9100000, guid: ed344664300c56e4188f1be1e7018522, type: 2}
+    - target: {fileID: 2995683704915487418, guid: 54b1c15d181fe4c4984430a9ccd06b02, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 792933744}
+    - target: {fileID: 2995683704915487418, guid: 54b1c15d181fe4c4984430a9ccd06b02, type: 3}
+      propertyPath: damageStates.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3217820452835261992, guid: 54b1c15d181fe4c4984430a9ccd06b02, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.41
@@ -13947,10 +13960,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3972386046945626359, guid: 54b1c15d181fe4c4984430a9ccd06b02, type: 3}
+      propertyPath: m_Name
+      value: Boss
+      objectReference: {fileID: 0}
     - target: {fileID: 6190165051423553066, guid: 54b1c15d181fe4c4984430a9ccd06b02, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1449334548, guid: 5b26246db02f9c04f9a014ba3110565d, type: 3}
+      objectReference: {fileID: 199470335, guid: 073c7f54a3b9bb54fad74c9e7de23144, type: 3}
     - target: {fileID: 6190165051423553066, guid: 54b1c15d181fe4c4984430a9ccd06b02, type: 3}
       propertyPath: m_Enabled
       value: 1

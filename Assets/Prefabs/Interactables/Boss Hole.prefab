@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 6190165051423553066}
   - component: {fileID: 2228257295362308992}
   m_Layer: 0
-  m_Name: sprite
+  m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,7 +142,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 18, y: 18, z: 18}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4912916753356336574}
@@ -188,7 +188,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 179692531, guid: 89f4ec595f5a84c45905b7d1b4287816, type: 3}
+  m_Sprite: {fileID: 199470335, guid: 073c7f54a3b9bb54fad74c9e7de23144, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -209,7 +209,7 @@ Animator:
   m_GameObject: {fileID: 3972386046945626359}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d2dd910b345b009488fc8f60ecf3eba7, type: 2}
+  m_Controller: {fileID: 9100000, guid: ed344664300c56e4188f1be1e7018522, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -333,4 +333,8 @@ MonoBehaviour:
   spider: {fileID: 4495168275834149656, guid: 8b28c5f109c0c5c44b8bfcd2b31a722c, type: 3}
   dmgToSpawn: 40
   spiderstorage: {fileID: 5003685765928291212}
-  damageStates: []
+  damageStates:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  animator: {fileID: 2228257295362308992}
