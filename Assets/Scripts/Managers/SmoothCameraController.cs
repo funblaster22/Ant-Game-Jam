@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class SmoothCameraController : MonoBehaviour
 {
-    float currentSize;
+    public float currentSize;
     float targetSize;
     public float zoomSpeed = 0.5f;
 
-    public float startingSize = 2;
-    public float growSpeed = 0.1f;
+    [SerializeField] float startingSize = 2;
+    [SerializeField] float growSpeed = 0.1f;
     GameState gameState;
     Camera cam;
     // Start is called before the first frame update

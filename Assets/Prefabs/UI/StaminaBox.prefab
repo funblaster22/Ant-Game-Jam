@@ -153,7 +153,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Stamina:'
+  m_text: Stamina
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6fb3b145881c48846bb9faac9a28b1f5, type: 2}
   m_sharedMaterial: {fileID: -147736373193244560, guid: 6fb3b145881c48846bb9faac9a28b1f5, type: 2}

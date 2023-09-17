@@ -24,13 +24,14 @@ public class PlayerController : MonoBehaviour
     public float maxStamina = 1.5f;
     
     //GameState gameState;
+    SmoothCameraController smoothCameraController;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = transform.GetComponent<Rigidbody2D>();
         //gameState = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameState>();
-
+        smoothCameraController = GameObject.FindGameObjectWithTag("GameController").GetComponent<SmoothCameraController>();
     }
 
     // Update is called once per frame
@@ -42,14 +43,15 @@ public class PlayerController : MonoBehaviour
         
         Vector2 moveDir = cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         //
-        float cameraScale = (CameraControler.cameraSize)/standardCamSize;
+        float cameraScale = (smoothCameraController.currentSize)/standardCamSize;
+        print(cameraScale);
         if(moveDir.magnitude > deadzone*cameraScale ){
             rb.velocity = moveDir.normalized*moveSpeed;
         }else{
             //crawlzone
             //unnormalized for finetuned control
             //account for increasing camera size
-            rb.velocity = moveDir*crawlSpeed/cameraScale;
+            rb.velocity = (moveDir/cameraScale)*crawlSpeed;
         }
         
         //Debug.Log(moveDir.magnitude);
