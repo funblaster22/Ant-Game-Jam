@@ -27,8 +27,11 @@ public class MusicController : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         Debug.Log("Scene Loaded: " + scene.name);
-        if (scene.buildIndex == SceneManager.sceneCountInBuildSettings - 1) {
+        if (scene.name == "Boss Level") {
             player.clip = bossTheme;
+            player.Play();
+        } else if (scene.name == "Credits") {
+            player.clip = levelTheme;
             player.Play();
         }
     }
