@@ -11,7 +11,6 @@ public class SimpleFollowerController : MonoBehaviour
     //[SerializeField] float maxForce;
     GameObject player;
     Rigidbody2D rb;
-    private float distanceWalked = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -36,10 +35,5 @@ public class SimpleFollowerController : MonoBehaviour
 
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
 
-        //distanceWalked += rb.velocity.magnitude * Time.deltaTime;
-        //if (distanceWalked > PlayerController.walkSoundDistance) {
-        //    GetComponent<AudioSource>().Play();
-        //    distanceWalked = 0;
-        //}
     }
 }

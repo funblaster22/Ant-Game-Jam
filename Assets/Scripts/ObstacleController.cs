@@ -9,6 +9,9 @@ public class ObstacleController : MonoBehaviour
     Rigidbody2D rb;
 
     GameState gameState;
+    private float distanceMoved = walkSoundDistance - 0.1f;
+    private const float walkSoundDistance = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,13 @@ public class ObstacleController : MonoBehaviour
             rb.isKinematic = false;
         }else{
             rb.isKinematic = true;
+        }
+
+        // Play a step sound after an ant has walked a certain distance
+        distanceMoved += rb.velocity.magnitude * Time.deltaTime;
+        if (distanceMoved > walkSoundDistance) {
+            GetComponent<AudioSource>().Play();
+            distanceMoved = 0;
         }
     }
 

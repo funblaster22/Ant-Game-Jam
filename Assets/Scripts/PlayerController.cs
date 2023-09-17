@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
 {
     float moveSpeed;
     public int walkSoundDistance = 2;
-    private float distanceWalked = 0;
 
     [SerializeField] float deadzone = 2;
     [SerializeField] float standardCamSize = 2;
@@ -55,13 +54,6 @@ public class PlayerController : MonoBehaviour
             //account for increasing camera size
             rb.velocity = (moveDir/cameraScale)*crawlSpeed;
         }
-
-        // Play a step sound after an ant has walked a certain distance
-        //distanceWalked += rb.velocity.magnitude * Time.deltaTime;
-        //if (distanceWalked > walkSoundDistance) {
-        //    GetComponent<AudioSource>().Play();
-        //    distanceWalked = 0;
-        //}
 
         //Debug.Log(moveDir.magnitude);
 
