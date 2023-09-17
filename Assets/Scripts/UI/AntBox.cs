@@ -17,6 +17,6 @@ public class AntBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeLabel.text = "Ants: " + gameState.FollowerCount;
+        timeLabel.text = "Ants: " + (gameState.FollowerCount + 1);
     }
 }

@@ -29,7 +29,7 @@ public class SpiderHole : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("Follower")) {
+        if (!oncooldown && collision.gameObject.CompareTag("Follower")) {
             gameState.RemoveAnt(collision.gameObject);
             oncooldown = true;
             currentTimer = 0;

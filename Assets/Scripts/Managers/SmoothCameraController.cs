@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SmoothCameraController : MonoBehaviour
@@ -24,8 +26,10 @@ public class SmoothCameraController : MonoBehaviour
     void Update()
     {
         targetSize = gameState.FollowerCount * growSpeed + startingSize;
-        
-        currentSize += Mathf.Sign(targetSize - currentSize) * zoomSpeed * Time.deltaTime;
+        if(Math.Abs(targetSize - currentSize) > 0.05){
+            currentSize += Mathf.Sign(targetSize - currentSize) * zoomSpeed * Time.deltaTime;
+        }
+
         cam.orthographicSize = currentSize;
 
     }
