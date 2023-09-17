@@ -28,7 +28,7 @@ public class LevelSwitcher : MonoBehaviour
 
     }
 
-    public void restartLevel(){
+    public static void restartLevel(){
         //currentLevelIndex++;
         print("restarted current level");
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
