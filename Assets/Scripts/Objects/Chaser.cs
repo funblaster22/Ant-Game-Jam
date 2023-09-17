@@ -12,6 +12,8 @@ public class Chaser : MonoBehaviour
     GameObject player;
     Rigidbody2D rb;
     [SerializeField] Transform art;
+    [SerializeField] List<AudioClip> eatingSounds;
+    private AudioSource audioPlayer;
 
     GameState gameState;
     [SerializeField] float cooldown = 1.0f;
@@ -23,6 +25,7 @@ public class Chaser : MonoBehaviour
         rb = transform.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         gameState = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameState>();
+        audioPlayer = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,12 +45,16 @@ public class Chaser : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (!oncooldown){
-            if(collision.gameObject.CompareTag("Follower") ){
+            // TODO: reduce code duplication between this & SpiderHole
+            audioPlayer.clip = eatingSounds[Random.Range(0, eatingSounds.Count)];
+            if (collision.gameObject.CompareTag("Follower") ){
                 gameState.RemoveAnt(collision.gameObject);
                 oncooldown = true;
                 currentTimer = 0;
-            }else if (collision.gameObject.CompareTag("Player") && gameState.FollowerCount == 0){
+                audioPlayer.Play();
+            } else if (collision.gameObject.CompareTag("Player") && gameState.FollowerCount == 0){
                 LevelSwitcher.restartLevel();
+                audioPlayer.Play();
             }
 
         }
