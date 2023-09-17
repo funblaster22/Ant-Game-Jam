@@ -19,6 +19,7 @@ public class AnthillGoal : MonoBehaviour
     void Start()
     {
         timer = delayLength;
+        Screen = GameObject.FindGameObjectWithTag("Screen");
     }
 
     // Update is called once per frame

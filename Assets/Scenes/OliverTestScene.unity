@@ -4791,6 +4791,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7434684994431993577, guid: acfbd7b818aaeee49a86873fafbd10a5, type: 3}
   m_PrefabInstance: {fileID: 307069158}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &309726872
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768061744975200586, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_Name
+      value: Anthill
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968934657876800931, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: Screen
+      value: 
+      objectReference: {fileID: 556365653}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
 --- !u!1001 &313323584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6272,6 +6333,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8842391128506564698, guid: 11a50adc7c8cba4479cc4893200755e0, type: 3}
   m_PrefabInstance: {fileID: 544049787}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &556365653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2137756561559959446, guid: 63bb616afd241514a8d52b42cbadefbb, type: 3}
+  m_PrefabInstance: {fileID: 655446670}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &559595619
 PrefabInstance:
@@ -9576,7 +9642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 986906867524464554, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2361983670565347181, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: orthographic size
@@ -9711,7 +9777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 986906867524464554, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2361983670565347181, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: orthographic size
@@ -17368,3 +17434,4 @@ SceneRoots:
   - {fileID: 1259841879}
   - {fileID: 951076516}
   - {fileID: 1628705611}
+  - {fileID: 309726872}
