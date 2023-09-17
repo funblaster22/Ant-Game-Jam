@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 2813218183149829571}
-  moveSpeed: 1
+  moveSpeed: 2
   maxSpeed: 5
 --- !u!1 &6477846684011062858
 GameObject:

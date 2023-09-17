@@ -23,7 +23,7 @@ public class SimpleFollowerController : MonoBehaviour
     void Update()
     {
         Vector3 moveDir = Vector3.Normalize(player.transform.position - transform.position);
-        rb.AddForce(moveDir*moveSpeed);
+        rb.AddForce(moveDir*moveSpeed*Time.deltaTime*50);
 
         //taken from https://discussions.unity.com/t/lookat-2d-equivalent/88118
         //trig to point followers at the player
