@@ -331,5 +331,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 130
   spider: {fileID: 4495168275834149656, guid: 8b28c5f109c0c5c44b8bfcd2b31a722c, type: 3}
-  dmgToSpawn: 30
+  dmgToSpawn: 40
   spiderstorage: {fileID: 5003685765928291212}
+  damageStates: []
