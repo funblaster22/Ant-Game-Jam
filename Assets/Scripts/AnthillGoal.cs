@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class AnthillGoal : MonoBehaviour
 {
-    [SerializeField] String nextLevel; 
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +21,7 @@ public class AnthillGoal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Player")) {
+            GetComponent<AudioSource>().Play();
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             //
             //LevelSwitcher switcher = GameObject.FindGameObjectWithTag("GameController").GetComponent<LevelSwitcher>();
