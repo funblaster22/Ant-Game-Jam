@@ -749,7 +749,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 476488586}
+    m_TransformParent: {fileID: 1791878219}
     m_Modifications:
     - target: {fileID: 2273976831110972862, guid: e4cc90e4bebce8f4a9c897e068c57493, type: 3}
       propertyPath: m_Name
@@ -757,15 +757,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5767129134172880601, guid: e4cc90e4bebce8f4a9c897e068c57493, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.296682
+      value: 2.0514488
       objectReference: {fileID: 0}
     - target: {fileID: 5767129134172880601, guid: e4cc90e4bebce8f4a9c897e068c57493, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 33.266663
+      value: -1.9172897
       objectReference: {fileID: 0}
     - target: {fileID: 5767129134172880601, guid: e4cc90e4bebce8f4a9c897e068c57493, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.036112953
+      value: -3.8103397
       objectReference: {fileID: 0}
     - target: {fileID: 5767129134172880601, guid: e4cc90e4bebce8f4a9c897e068c57493, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5712,7 +5712,6 @@ Transform:
   - {fileID: 687910249}
   - {fileID: 1394526410}
   - {fileID: 1890744399}
-  - {fileID: 89321835}
   - {fileID: 679101386}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9724,11 +9723,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6009544282865030904, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.23
+      value: 3.43
       objectReference: {fileID: 0}
     - target: {fileID: 6009544282865030904, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.78
+      value: 37.92
       objectReference: {fileID: 0}
     - target: {fileID: 6009544282865030904, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13887,6 +13886,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss Hole
       objectReference: {fileID: 0}
+    - target: {fileID: 2995683704915487418, guid: 54b1c15d181fe4c4984430a9ccd06b02, type: 3}
+      propertyPath: antHill
+      value: 
+      objectReference: {fileID: 4768061744975200586, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+    - target: {fileID: 2995683704915487418, guid: 54b1c15d181fe4c4984430a9ccd06b02, type: 3}
+      propertyPath: dmgToSpawn
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3217820452835261992, guid: 54b1c15d181fe4c4984430a9ccd06b02, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.41
@@ -14651,6 +14658,7 @@ Transform:
   - {fileID: 963547569}
   - {fileID: 2137313167}
   - {fileID: 695243843}
+  - {fileID: 89321835}
   - {fileID: 885586089}
   - {fileID: 1373828576}
   - {fileID: 2107997423}

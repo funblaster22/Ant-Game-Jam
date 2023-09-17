@@ -14,8 +14,11 @@ public class BossController : MonoBehaviour
 
     [SerializeField] Animator animator;
 
-    [SerializeField] GameObject gate;
+    [SerializeField] GameObject antHill;
     int accummulatedDamage = 0;
+    int spawnedSpiders = 0;
+    bool won = false;
+    [SerializeField]float timer = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +28,24 @@ public class BossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(won){
+            timer -= Time.deltaTime;
+        }
         
+        if(timer<0){
+            Instantiate(antHill,transform.position,quaternion.identity,spiderstorage);
+        }
+
+        if(accummulatedDamage >= dmgToSpawn && !won && spawnedSpiders < 3){
+            //make spider
+            print("Spider Time!");
+            Instantiate(spider,transform.position,quaternion.identity,spiderstorage);
+            spawnedSpiders++;
+            //switch sprite
+            accummulatedDamage -= dmgToSpawn;
+            animator.SetTrigger("Damaged 1");
+        }
+
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -46,14 +66,6 @@ public class BossController : MonoBehaviour
         if(health <= 0){
             Die();
         }
-        if(accummulatedDamage >= dmgToSpawn){
-            //make spider
-            print("Spider Time!");
-            Instantiate(spider,transform.position,quaternion.identity,spiderstorage);
-            //switch sprite
-            accummulatedDamage -= dmgToSpawn;
-            animator.SetTrigger("Damaged 1");
-        }
     }
 
     void Die(){
@@ -63,9 +75,8 @@ public class BossController : MonoBehaviour
         }
 
         print("You defeated the boss!");
-
-        
+        animator.SetTrigger("Explode");
         //play win screen
-        Destroy(gate);
+        won = true;
     }
 }
