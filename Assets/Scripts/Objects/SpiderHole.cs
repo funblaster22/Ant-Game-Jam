@@ -33,7 +33,7 @@ public class SpiderHole : MonoBehaviour
                 gameState.RemoveAnt(collision.gameObject);
                 oncooldown = true;
                 currentTimer = 0;
-            }else if (collision.gameObject.CompareTag("Player")){
+            }else if (collision.gameObject.CompareTag("Player") && gameState.FollowerCount == 0){
                 LevelSwitcher.restartLevel();
             }
 
