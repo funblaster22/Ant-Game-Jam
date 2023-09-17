@@ -17,12 +17,21 @@ public class LevelSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.R)){
+            restartLevel();
+        }
     }
 
     public void nextLevel(){
         //currentLevelIndex++;
         //SceneManager.LoadSceneAsync(sceneNames[currentLevelIndex]);
+
+    }
+
+    public void restartLevel(){
+        //currentLevelIndex++;
+        print("restarted current level");
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
 
     }
 

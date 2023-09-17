@@ -42,13 +42,21 @@ public class Chaser : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Follower")) {
             gameState.RemoveAnt(collision.gameObject);
-        }else if (collision.gameObject.CompareTag("Player") && gameState.FollowerCount > antDeathNum) {
-            Die();
+        }else if (collision.gameObject.CompareTag("Player")) {
+            if (gameState.FollowerCount > antDeathNum){
+                Die();
+            }else{
+                print("You Lost");
+                
+            }
+            
         }
     }
 
     void Die(){
         //replace sprite
-        this.enabled = false;
+
+        //disable logic
+        enabled = false;
     }
 }
