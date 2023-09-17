@@ -1670,22 +1670,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2361983670565347181, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.2577019
+      value: 0.21682356
       objectReference: {fileID: 0}
     - target: {fileID: 2361983670565347181, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.5566038
+      value: 0.48842356
       objectReference: {fileID: 0}
     - target: {fileID: 2361983670565347181, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.20688856
+      value: 0.582
       objectReference: {fileID: 0}
     - target: {fileID: 2716953196995714908, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5658539127094912891, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
-      propertyPath: deadzone
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6009544282865030904, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
@@ -1867,7 +1863,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5a5badf8daa23554a8b788eec2225631, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.30588236, b: 0.30588236, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3596,7 +3592,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5a5badf8daa23554a8b788eec2225631, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.30588236, b: 0.30588236, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4454,7 +4450,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5a5badf8daa23554a8b788eec2225631, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.30588236, b: 0.30588236, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6534,7 +6530,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5a5badf8daa23554a8b788eec2225631, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.30566037, b: 0.30566037, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
