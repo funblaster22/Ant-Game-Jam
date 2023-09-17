@@ -21,7 +21,7 @@ public class ObstacleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameState.FollowerCount > antsRequired){
+        if (gameState.FollowerCount >= antsRequired){
             rb.isKinematic = false;
         }else{
             rb.isKinematic = true;

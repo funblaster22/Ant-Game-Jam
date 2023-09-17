@@ -35,12 +35,9 @@ public class RequirementDisplay : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        print("COLLIDED!");
+    private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Player") && gameState.FollowerCount >= antsRequired) {
-            print("Goodbye cruel world!");
-            var reqDisplay = GetComponent<RequirementDisplay>();
-            reqDisplay.display.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }
