@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     float moveSpeed;
+    public int walkSoundDistance = 2;
 
     [SerializeField] float deadzone = 2;
     [SerializeField] float standardCamSize = 2;
@@ -53,7 +54,7 @@ public class PlayerController : MonoBehaviour
             //account for increasing camera size
             rb.velocity = (moveDir/cameraScale)*crawlSpeed;
         }
-        
+
         //Debug.Log(moveDir.magnitude);
 
         //taken from https://discussions.unity.com/t/lookat-2d-equivalent/88118

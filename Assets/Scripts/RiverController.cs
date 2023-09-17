@@ -35,6 +35,7 @@ public class RiverController : MonoBehaviour
             gameState.RemoveAnts(antsRequired);
             //Destroy(reqDisplay);
 
+            GetComponent<AudioSource>().Play();
         }
     }
 }

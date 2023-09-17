@@ -11,6 +11,7 @@ public class SimpleFollowerController : MonoBehaviour
     //[SerializeField] float maxForce;
     GameObject player;
     Rigidbody2D rb;
+
     // Start is called before the first frame update
     void Start()
     {
