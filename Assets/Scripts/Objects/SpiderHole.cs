@@ -29,13 +29,16 @@ public class SpiderHole : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (!oncooldown && collision.gameObject.CompareTag("Follower")) {
-            gameState.RemoveAnt(collision.gameObject);
-            oncooldown = true;
-            currentTimer = 0;
+        if (!oncooldown) {
+            if(collision.gameObject.CompareTag("Follower") ){
+                gameState.RemoveAnt(collision.gameObject);
+                oncooldown = true;
+                currentTimer = 0;
+            }else if (collision.gameObject.CompareTag("Player")){
+                LevelSwitcher.restartLevel();
+            }
+
         }
-        //else if (collision.gameObject.CompareTag("Player") && gameState.FollowerCount > antDeathNum) {
-            //Die();
-        //}
+
     }
 }
