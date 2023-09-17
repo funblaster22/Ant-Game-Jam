@@ -61,6 +61,7 @@ public class BossController : MonoBehaviour
 
     void TakeDamage(int dmg){
         //play sound effect
+        GetComponent<AudioSource>().Play();
         health -= dmg;
         accummulatedDamage += dmg;
         if(health <= 0){
