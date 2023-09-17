@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         Vector2 moveDir = cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         //
         float cameraScale = (smoothCameraController.currentSize)/standardCamSize;
-        print(cameraScale);
+        //print(cameraScale);
         if(moveDir.magnitude > deadzone*cameraScale ){
             rb.velocity = moveDir.normalized*moveSpeed;
         }else{
