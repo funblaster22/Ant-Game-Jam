@@ -8,7 +8,6 @@ public class SpiderHole : MonoBehaviour
     GameState gameState;
     [SerializeField] float cooldown = 1.0f;
     float currentTimer;
-
     bool oncooldown = false;
     void Start()
     {
