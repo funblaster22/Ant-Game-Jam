@@ -187,7 +187,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -3
   m_Sprite: {fileID: 199470335, guid: 073c7f54a3b9bb54fad74c9e7de23144, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -333,8 +333,4 @@ MonoBehaviour:
   spider: {fileID: 4495168275834149656, guid: 8b28c5f109c0c5c44b8bfcd2b31a722c, type: 3}
   dmgToSpawn: 40
   spiderstorage: {fileID: 5003685765928291212}
-  damageStates:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   animator: {fileID: 2228257295362308992}
