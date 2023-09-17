@@ -27,7 +27,7 @@ public class AnthillGoal : MonoBehaviour
             //LevelSwitcher switcher = GameObject.FindGameObjectWithTag("GameController").GetComponent<LevelSwitcher>();
             print("Next Level!");
             //switcher.nextLevel();
-            SceneManager.LoadSceneAsync(nextLevel);
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
             
         }
     }
