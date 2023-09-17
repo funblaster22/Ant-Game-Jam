@@ -11,13 +11,15 @@ public class SimpleFollowerController : MonoBehaviour
     //[SerializeField] float maxForce;
     GameObject player;
     Rigidbody2D rb;
+    public List<AudioClip> yaySounds;
+    private AudioSource audioPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = transform.GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
-
+        audioPlayer = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -35,5 +37,13 @@ public class SimpleFollowerController : MonoBehaviour
 
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.CompareTag("Anthill") && audioPlayer != null) {
+            audioPlayer.clip = yaySounds[Random.Range(0, yaySounds.Count)];
+            audioPlayer.Play();
+            audioPlayer = null;
+        }
     }
 }

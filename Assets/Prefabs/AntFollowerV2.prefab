@@ -123,6 +123,9 @@ MonoBehaviour:
   sprite: {fileID: 2813218183149829571}
   moveSpeed: 2
   maxSpeed: 5
+  yaySounds:
+  - {fileID: 8300000, guid: a93c3dc4425de764989a5a751bbe00ba, type: 3}
+  - {fileID: 8300000, guid: 6bdd68b916691ca4ead355758d0add1e, type: 3}
 --- !u!82 &1125755184065426923
 AudioSource:
   m_ObjectHideFlags: 0
