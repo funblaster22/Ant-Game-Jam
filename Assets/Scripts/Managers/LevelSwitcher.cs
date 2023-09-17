@@ -6,8 +6,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LevelSwitcher : MonoBehaviour
 {
-    [SerializeField] String[] sceneNames;
-    public int currentLevelIndex = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +18,14 @@ public class LevelSwitcher : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R)){
             restartLevel();
         }
+        if (Input.GetKeyDown(KeyCode.N)) {
+            nextLevel();
+        }
     }
 
     public void nextLevel(){
-        //currentLevelIndex++;
-        //SceneManager.LoadSceneAsync(sceneNames[currentLevelIndex]);
+        // Most level switching is handled by AnthillGoal.cs, this is primarily for title screen
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
 
