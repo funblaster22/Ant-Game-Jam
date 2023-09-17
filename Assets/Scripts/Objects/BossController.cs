@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -20,11 +21,12 @@ public class BossController : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.gameObject.CompareTag("Food")){
             ObstacleController block = collision.gameObject.GetComponent<ObstacleController>();
-
+            print("ouch");
             TakeDamage(block.antsRequired);
             Destroy(collision.gameObject);
         }
@@ -39,7 +41,8 @@ public class BossController : MonoBehaviour
         }
         if(accummulatedDamage >= 50){
             //make spider
-            Instantiate(spider);
+            print("Spider Time!");
+            Instantiate(spider,transform.position,quaternion.identity);
             accummulatedDamage -= 50;
         }
     }

@@ -229,5 +229,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bee9951b04463b44931eb1737ec04b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 200
+  health: 150
   spider: {fileID: 4495168275834149656, guid: 8b28c5f109c0c5c44b8bfcd2b31a722c, type: 3}
