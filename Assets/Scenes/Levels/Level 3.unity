@@ -1725,9 +1725,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2361983670565347181, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.2577019
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361983670565347181, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.5566038
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361983670565347181, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.20688856
+      objectReference: {fileID: 0}
     - target: {fileID: 2716953196995714908, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5658539127094912891, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: deadzone
