@@ -14,7 +14,7 @@ public class AnthillGoal : MonoBehaviour
     [SerializeField] float delayLength = 2; 
     float timer;
     bool switching = false;
-    void Start()
+    void Awake()
     {
         timer = delayLength;
         Screen = GameObject.FindGameObjectWithTag("Screen");
@@ -34,6 +34,7 @@ public class AnthillGoal : MonoBehaviour
         }
 
         if(timer < 0){
+            print("win level!");
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
 
         }
