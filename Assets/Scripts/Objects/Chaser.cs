@@ -46,7 +46,7 @@ public class Chaser : MonoBehaviour
                 gameState.RemoveAnt(collision.gameObject);
                 oncooldown = true;
                 currentTimer = 0;
-            }else if (collision.gameObject.CompareTag("Player")){
+            }else if (collision.gameObject.CompareTag("Player") && gameState.FollowerCount == 0){
                 LevelSwitcher.restartLevel();
             }
 
@@ -72,5 +72,5 @@ public class Chaser : MonoBehaviour
         //disable logic
         enabled = false;
     }
-    
+
 }
