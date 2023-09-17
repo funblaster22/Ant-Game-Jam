@@ -28,6 +28,10 @@ public class BossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(health <= 0){
+            Die();
+        }
         if(won){
             timer -= Time.deltaTime;
         }

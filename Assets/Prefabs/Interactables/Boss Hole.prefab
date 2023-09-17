@@ -435,7 +435,7 @@ MonoBehaviour:
   dmgToSpawn: 40
   spiderstorage: {fileID: 5003685765928291212}
   animator: {fileID: 2228257295362308992}
-  antHill: {fileID: 0}
+  antHill: {fileID: 4768061744975200586, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
   timer: 3
 --- !u!82 &1712468209813221283
 AudioSource:
