@@ -14,6 +14,10 @@ public class Chaser : MonoBehaviour
     [SerializeField] Transform art;
 
     GameState gameState;
+    [SerializeField] float cooldown = 1.0f;
+    float currentTimer;
+    bool oncooldown = false;
+
     void Start()
     {
         rb = transform.GetComponent<Rigidbody2D>();
@@ -24,39 +28,49 @@ public class Chaser : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Move();
+
+        if(oncooldown){
+            currentTimer += Time.deltaTime;
+        }
+
+        if(currentTimer > cooldown){
+            oncooldown = false;
+        }
+    }
+    
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (!oncooldown){
+            if(collision.gameObject.CompareTag("Follower") ){
+                gameState.RemoveAnt(collision.gameObject);
+                oncooldown = true;
+                currentTimer = 0;
+            }else if (collision.gameObject.CompareTag("Player") && gameState.FollowerCount == 0){
+                LevelSwitcher.restartLevel();
+            }
+
+        }
+    }
+
+    void Move(){
         Vector3 moveDir = Vector3.Normalize(player.transform.position - transform.position);
         rb.AddForce(moveDir*moveSpeed);
         //taken from https://discussions.unity.com/t/lookat-2d-equivalent/88118
         //trig to point followers at the player
         Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         diff.Normalize();
-
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
         //sprite is flipped by default
         art.rotation = Quaternion.Euler(0f, 0f, rot_z - 90 + 180);
-
         // from https://stackoverflow.com/questions/48122532/how-to-set-maximum-velocity-of-a-rigidbody-in-unity
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
     }
-
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag("Follower")) {
-            gameState.RemoveAnt(collision.gameObject);
-        }else if (collision.gameObject.CompareTag("Player")) {
-            if (gameState.FollowerCount > antDeathNum){
-                Die();
-            }else{
-                print("You Lost");
-                
-            }
-            
-        }
-    }
-
     void Die(){
         //replace sprite
 
         //disable logic
         enabled = false;
     }
+
 }

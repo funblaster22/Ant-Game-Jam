@@ -59,7 +59,7 @@ MonoBehaviour:
     value: 0
   colorFilter:
     overrideState: 1
-    value: {r: 0.5803922, g: 0.49019608, b: 0.21568628, a: 1}
+    value: {r: 0.13250946, g: 4.131186, b: 3.2309606, a: 1}
   hueShift:
     overrideState: 0
     value: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
     value: {x: 0.81970763, y: 0.88038933, z: 1, w: 0}
   gamma:
     overrideState: 1
-    value: {x: 0.8628357, y: 0.83353835, z: 1, w: 0}
+    value: {x: 1, y: 0.90146255, z: 0.996043, w: 0}
   gain:
     overrideState: 1
     value: {x: 1, y: 0.24608056, z: 0.22403377, w: 0}
@@ -1365,7 +1365,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
-  m_Name: Lvl2
+  m_Name: Lvl3
   m_EditorClassIdentifier: 
   settings:
   - {fileID: -5704927996840354495}
@@ -1398,10 +1398,10 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.502
+    value: 0.295
   smoothness:
     overrideState: 1
-    value: 0.699
+    value: 0.306
   roundness:
     overrideState: 0
     value: 0.317
