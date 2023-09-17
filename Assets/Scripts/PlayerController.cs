@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -18,9 +19,9 @@ public class PlayerController : MonoBehaviour
 
     bool tryRunning = false;
     bool recovering = false;
-    float stamina;
+    [NonSerialized] public float stamina;
     [SerializeField] float recoverSpeed = 1.0f;
-    [SerializeField] float maxStamina = 1.5f;
+    public float maxStamina = 1.5f;
     
     //GameState gameState;
 
