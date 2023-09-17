@@ -19872,6 +19872,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7280616566969493461, guid: 5eb4f33fe88af284893c01ecd49af93c, type: 3}
   m_PrefabInstance: {fileID: 1430061703}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1407455202
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 41.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 637586746332991216, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768061744975200586, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_Name
+      value: Anthill
+      objectReference: {fileID: 0}
+    - target: {fileID: 4768061744975200586, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
 --- !u!1001 &1412459388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19937,6 +19998,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7699085323096587725, guid: 6f6a93ff6fb25cc419cf8065eba0e0f0, type: 3}
   m_PrefabInstance: {fileID: 1412459388}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1419777194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4768061744975200586, guid: afbd7ecc5bd75e64693bc5575badfa6b, type: 3}
+  m_PrefabInstance: {fileID: 1407455202}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1420027194
 PrefabInstance:
@@ -27818,6 +27884,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss Hole
       objectReference: {fileID: 0}
+    - target: {fileID: 2995683704915487418, guid: 54b1c15d181fe4c4984430a9ccd06b02, type: 3}
+      propertyPath: antHill
+      value: 
+      objectReference: {fileID: 1419777194}
     - target: {fileID: 3217820452835261992, guid: 54b1c15d181fe4c4984430a9ccd06b02, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.41
@@ -28065,6 +28135,7 @@ SceneRoots:
   - {fileID: 404936290}
   - {fileID: 200660362}
   - {fileID: 1179353869}
+  - {fileID: 1407455202}
   - {fileID: 113563654564800284}
   - {fileID: 263633017}
   - {fileID: 1643766175}

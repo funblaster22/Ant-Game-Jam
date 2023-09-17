@@ -37,7 +37,10 @@ public class BossController : MonoBehaviour
         }
         
         if(timer<0){
-            Instantiate(antHill,transform.position,quaternion.identity,spiderstorage);
+            //Instantiate(antHill,transform.position,quaternion.identity,spiderstorage);
+            antHill.SetActive(true);
+            transform.parent.GetComponent<SpiderHole>().enabled = false;
+            enabled = false;
         }
 
         if(accummulatedDamage >= dmgToSpawn && !won && spawnedSpiders < 3){
