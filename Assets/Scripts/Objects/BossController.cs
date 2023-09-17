@@ -13,6 +13,7 @@ public class BossController : MonoBehaviour
     [SerializeField] Transform spiderstorage;
 
     [SerializeField] Sprite[] damageStates;
+    [SerializeField] Animator animator;
     int accummulatedDamage = 0;
     // Start is called before the first frame update
     void Start()
@@ -50,6 +51,7 @@ public class BossController : MonoBehaviour
             Instantiate(spider,transform.position,quaternion.identity,spiderstorage);
             //switch sprite
             accummulatedDamage -= dmgToSpawn;
+            animator.SetTrigger("Damaged 1");
         }
     }
 
