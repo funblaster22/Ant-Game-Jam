@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleTheme: {fileID: 0}
   levelTheme: {fileID: 8300000, guid: 753e23281ffa006488015dbfc8a8aaa8, type: 3}
-  bossTheme: {fileID: 0}
+  bossTheme: {fileID: 8300000, guid: 09ec103d6ecd3954ba6de2bd76e36456, type: 3}
 --- !u!82 &1423545337898294800
 AudioSource:
   m_ObjectHideFlags: 0
