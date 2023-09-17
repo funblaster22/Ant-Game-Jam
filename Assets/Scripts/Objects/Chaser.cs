@@ -58,7 +58,7 @@ public class Chaser : MonoBehaviour
         rb.AddForce(moveDir*moveSpeed);
         //taken from https://discussions.unity.com/t/lookat-2d-equivalent/88118
         //trig to point followers at the player
-        Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        Vector3 diff = player.transform.position - transform.position;
         diff.Normalize();
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
         //sprite is flipped by default

@@ -6,8 +6,13 @@ using UnityEngine;
 
 public class BossController : MonoBehaviour
 {
-    [SerializeField] float health = 100;
+    [SerializeField] int health = 100;
     [SerializeField] GameObject spider;
+    [SerializeField] int dmgToSpawn = 30;
+
+    [SerializeField] Transform spiderstorage;
+
+    [SerializeField] Sprite[] damageStates;
     int accummulatedDamage = 0;
     // Start is called before the first frame update
     void Start()
@@ -39,16 +44,24 @@ public class BossController : MonoBehaviour
         if(health <= 0){
             Die();
         }
-        if(accummulatedDamage >= 50){
+        if(accummulatedDamage >= dmgToSpawn){
             //make spider
             print("Spider Time!");
-            Instantiate(spider,transform.position,quaternion.identity);
-            accummulatedDamage -= 50;
+            Instantiate(spider,transform.position,quaternion.identity,spiderstorage);
+            //switch sprite
+            accummulatedDamage -= dmgToSpawn;
         }
     }
 
     void Die(){
+        //deletes the spiders
+        foreach (Transform child in spiderstorage) {
+            Destroy(child.gameObject);
+        }
+
         print("You defeated the boss!");
+
+
         //play win screen
 
     }
