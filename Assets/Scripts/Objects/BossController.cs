@@ -12,8 +12,9 @@ public class BossController : MonoBehaviour
 
     [SerializeField] Transform spiderstorage;
 
-    [SerializeField] Sprite[] damageStates;
     [SerializeField] Animator animator;
+
+    [SerializeField] GameObject gate;
     int accummulatedDamage = 0;
     // Start is called before the first frame update
     void Start()
@@ -63,8 +64,8 @@ public class BossController : MonoBehaviour
 
         print("You defeated the boss!");
 
-
+        
         //play win screen
-
+        Destroy(gate);
     }
 }

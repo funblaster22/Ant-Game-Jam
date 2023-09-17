@@ -59,7 +59,7 @@ MonoBehaviour:
     value: 0
   colorFilter:
     overrideState: 1
-    value: {r: 0.85906875, g: 0.25743866, b: 0.8690605, a: 1}
+    value: {r: 2.3246074, g: 1.1491455, b: 1.1666892, a: 1}
   hueShift:
     overrideState: 0
     value: 0
@@ -1365,7 +1365,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
-  m_Name: Lvl2
+  m_Name: BossLvl
   m_EditorClassIdentifier: 
   settings:
   - {fileID: -5704927996840354495}
