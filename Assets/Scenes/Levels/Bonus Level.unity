@@ -2757,13 +2757,29 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2200277882826055382, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: 9944e54ad3236c444a08eaf2d61b6a3f, type: 2}
     - target: {fileID: 2361983670565347181, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: orthographic size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2361983670565347181, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361983670565347181, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.24313727
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361983670565347181, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.22352943
+      objectReference: {fileID: 0}
     - target: {fileID: 2716953196995714908, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6009544282865030904, guid: ff7ff5c6b81cec548bce8e2005710069, type: 3}
       propertyPath: m_LocalPosition.x
