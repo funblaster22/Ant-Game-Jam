@@ -9,6 +9,7 @@ TagManager:
   - Food
   - Follower
   - Screen
+  - Anthill
   layers:
   - Default
   - TransparentFX
