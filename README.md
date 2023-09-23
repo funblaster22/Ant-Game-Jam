@@ -1,6 +1,10 @@
+# AntField: Even Better than Starfield (GOTY Edition)
+
 Made for the SIGGD September 2023 Game Jam
 
 Team: Oliver Long, Ethan Dawes, Sam Shafer, Nicole Tomaszewski, Tyler Hsieh, Sara Xiao
+
+[🎮 Play now!](https://purduesiggd.github.io/game-jam-games/AntField.html)
 
 Controls: <br>
 Move mouse to move, stay close to the center of the screen to walk slowly<br>
